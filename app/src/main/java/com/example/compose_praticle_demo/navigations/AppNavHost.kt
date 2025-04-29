@@ -15,6 +15,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.compose_praticle_demo.modules.onboarding.ui.OnboardingPage
 import com.example.compose_praticle_demo.modules.onboarding.viewmodel.OnboardingViewmodel
+import com.example.compose_praticle_demo.modules.otpscreen.ui.ConfirmPhoneScreenPreview
+import com.example.compose_praticle_demo.modules.otpscreen.viewmodel.OtpViewModel
 import com.example.compose_praticle_demo.modules.splash.ui.SplashScreenView
 import com.example.compose_praticle_demo.modules.splash.viewmodel.SplashViewModel
 
@@ -54,6 +56,14 @@ fun AppNavHost(
         composable(Destination.OnBoardingScreen.fullRoute) {
             val viewModel = hiltViewModel<OnboardingViewmodel>()
             OnboardingPage(
+                navController,
+                viewModel = viewModel,
+            )
+        }
+
+        composable(Destination.OtpScreen.fullRoute) {
+            val viewModel = hiltViewModel<OtpViewModel>()
+            ConfirmPhoneScreenPreview(
                 navController,
                 viewModel = viewModel,
             )

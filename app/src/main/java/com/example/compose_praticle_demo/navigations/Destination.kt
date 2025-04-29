@@ -1,7 +1,5 @@
 package com.example.compose_praticle_demo.navigations
 
-import kotlinx.serialization.Serializable
-
 sealed class Destination(protected val route: String, vararg params: String) {
     val fullRoute: String = if (params.isEmpty()) route else {
         val builder = StringBuilder(route)
@@ -16,12 +14,11 @@ sealed class Destination(protected val route: String, vararg params: String) {
     data object SplashScreen : NoArgumentsDestination(NAV_SPLASH)
     data object LoginScreen : NoArgumentsDestination(NAV_LOGIN)
     data object OnBoardingScreen : NoArgumentsDestination(NAV_ONBOARDING)
+    data object OtpScreen : NoArgumentsDestination(NAV_CONFIRM_PHONE_SCREEN_PREVIEW)
 }
 
-@Serializable
 data class ImageGalleryScreen(val images: List<String>)
 
-@Serializable
 data class NewChatConnectDetail(val groupName: String = "", val userName: String = "", )
 
 internal fun String.appendNavParams(vararg params: Pair<String, Any?>): String {

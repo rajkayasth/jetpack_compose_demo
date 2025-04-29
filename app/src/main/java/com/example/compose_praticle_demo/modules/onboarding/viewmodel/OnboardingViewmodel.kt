@@ -9,4 +9,7 @@ import javax.inject.Inject
 class OnboardingViewmodel @Inject constructor() : ViewModelBase() {
     @Inject
     lateinit var pref: MyPreference
+
+
+
 }
