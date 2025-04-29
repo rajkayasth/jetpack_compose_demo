@@ -25,6 +25,10 @@ ksp = "2.0.21-1.0.27"
 accompanistPlaceholderMaterial = "0.32.0"
 accompanistSystemuicontroller = "0.36.0"
 securityCrypto = "1.1.0-alpha06"
+lottieCompose = "6.4.1"
+constraintlayoutCompose = "1.1.0"
+
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -61,6 +65,8 @@ gson-converter = {group = "com.squareup.retrofit2", name = "converter-gson", ver
 accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanistPlaceholderMaterial" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottieCompose" }
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 
 
 [plugins]

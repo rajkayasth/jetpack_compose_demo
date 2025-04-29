@@ -95,5 +95,10 @@ dependencies {
     // Crypto for encrypted shared preferences
     implementation(libs.androidx.security.crypto)
 
+    //lottie animation
+    // added for lottie animation
+    implementation(libs.lottie.compose)
+    implementation(libs.androidx.constraintlayout.compose)
+
 
 }

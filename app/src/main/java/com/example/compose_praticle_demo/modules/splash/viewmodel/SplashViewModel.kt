@@ -10,21 +10,21 @@ class SplashViewModel @Inject constructor() : ViewModelBase() {
     @Inject
     lateinit var pref: MyPreference
 
-//    var onboardingVisitedAr: Boolean
-//        get() = pref.onBoardingVisitedAr
-//        set(value) {
-//            pref.onBoardingVisitedAr = value
-//        }
-//
-//    var onboardingVisitedEn: Boolean
-//        get() = pref.onBoardingVisitedEn
-//        set(value) {
-//            pref.onBoardingVisitedEn = value
-//        }
-//
-//    var isLogined: Boolean
-//        get() = pref.isLogined
-//        set(value) {
-//            pref.isLogined = value
-//        }
+    var onboardingVisitedAr: Boolean
+        get() = pref.onBoardingVisitedAr
+        set(value) {
+            pref.onBoardingVisitedAr = value
+        }
+
+    var onboardingVisitedEn: Boolean
+        get() = pref.onBoardingVisitedEn
+        set(value) {
+            pref.onBoardingVisitedEn = value
+        }
+
+    var isLogined: Boolean
+        get() = pref.isLogined
+        set(value) {
+            pref.isLogined = value
+        }
 }
