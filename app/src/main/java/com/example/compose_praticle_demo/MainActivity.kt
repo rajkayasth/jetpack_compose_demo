@@ -11,8 +11,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.compose_praticle_demo.navigations.AppNavHost
+import com.example.compose_praticle_demo.navigations.Destination
 import com.example.compose_praticle_demo.ui.theme.Compose_Praticle_demoTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Compose_Praticle_demoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    OnTimeApp(modifier = Modifier.padding(innerPadding), activity = this)
                 }
             }
         }
@@ -31,17 +33,16 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
+fun OnTimeApp(
+    activity: MainActivity,
+    modifier: Modifier,
+) {
+    val navController = rememberNavController()
+    AppNavHost(
+        modifier = modifier,
+        navController = navController,
+        startDestination = Destination.SplashScreen,
+        activity = activity
     )
 }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Compose_Praticle_demoTheme {
-        Greeting("Android")
-    }
-}

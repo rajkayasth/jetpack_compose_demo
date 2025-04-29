@@ -88,4 +88,12 @@ dependencies {
     // Add this in your build.gradle
     implementation (libs.accompanist.systemuicontroller);
 
+    //json
+    implementation(libs.kotlinx.serialization.json)
+
+    ///shared pref
+    // Crypto for encrypted shared preferences
+    implementation(libs.androidx.security.crypto)
+
+
 }
