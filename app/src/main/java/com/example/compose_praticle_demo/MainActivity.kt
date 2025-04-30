@@ -24,9 +24,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Compose_Praticle_demoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    OnTimeApp(modifier = Modifier.padding(innerPadding), activity = this)
-                }
+                OnTimeApp(modifier = Modifier, activity = this)
             }
         }
     }
